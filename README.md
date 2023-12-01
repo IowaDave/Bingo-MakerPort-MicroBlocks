@@ -184,11 +184,13 @@ MicroCode waits for the user to touch another touchpoint.
 This script illustrates how the ```for ... in ...``` block of MicroBlocks sequentially processes each item in a list. Not every programming language makes it this easy.
 
 ---
+
 NOTE TO REVIEWERS
 
 It also illustrates how to type information into a window on a connected computer.
 
 I feel indifferent about whether this feature belongs in an introductory project.
+
 --- 
 
 ![Picture of when-typeballs script](./images/when-typeballs-received.png)
