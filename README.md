@@ -9,7 +9,7 @@ To build this project you will need:
 * three "touchpoints", explained below
 * optional microSD card to contain audio files
 * USB-C cable connection to a computer
-* MakeCode IDE, either by:
+* MicroBlocks IDE, either by:
     * installing the standalone IDE on a compatible computer, or
     * using a Web browser capable of running the free online IDE [available through this link](https://microblocks.fun/run-pilot/microblocks.html).
 * optional accessory power supply, when you want to run the game without a computer connection.
