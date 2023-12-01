@@ -51,16 +51,22 @@ For newcomers to MicroBlocks and MakerPort, here is a link to a separate, [intro
 ### The MakerPort Library
 MicroBlocks supports many different Maker devices. You can customize the language by adding a Library.
 
-Install the MakerPort by following these links in the MicroBlocks editing window: +Library > Kits and Boards > MakerPort.
+Install the MakerPort library by following these links in the MicroBlocks editing window: +Library > Kits and Boards > MakerPort.
 
 ### All About Touchpoints
 A touchpoint is a physical object that works as a kind of electronic pushbutton. Merely touch it. The MakerPort will detect the touch and activate code you write to respond to it.
 
 Almost anything metallic or moist can be a touchpoint: an empty tin can or piece of aluminum foil will do nicely; you can even use fruit. MakerPort includes a port for connecting up to 12 of these versatile sensors through wires. For example, see Figure 1.
 
+![Figure 1](./images/figure_1.jpg)
+**Figure 1**
+
 This project uses inexpensive earring backs, commonly available in the jewelry-making area of craft stores. Their small size and uniform shape makes them especially suitable for interactive displays. 
 
 In this project, we insert three touchpoints into special, extra ports provided on the MakerPort enclosure itself. Figure 2 illustrates their placement. No further wiring is required, except to connect a power source to the MakerPort.
+
+![Figure 2](./images/figure_2.jpg)
+**Figure 2**
 
 ### Optional Audio
 The example code provided for this project takes advantage of the MakerPort's MP3 player and built-in speaker.
@@ -95,7 +101,7 @@ The script suspends the game while it completes three, one-time tasks to get thi
 
 It then launches the first game by broadcasting the "newGame" message. What does "broadcast" mean?
 
-To this old programmer's mind, it resembles the ancient "goto" or "jmp" instruction. Program execution will continue from the target location. In this case, it activates the ```when newGame receive``` script, described next.
+To this old programmer's mind, it resembles the ancient "goto" or "jmp" instruction. Program execution will continue from the target location. In this case, it activates the ```when newGame received``` script, described next.
 
 However, there is a difference. The old-timey "goto" specifies just one destination. By contrast in MicroBlocks, more than one script in a program can receive and act upon a message. 
 
