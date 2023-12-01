@@ -19,7 +19,9 @@ To build this project you will need:
 
 ## Introduction
 ### The MakerPort
-You've heard the saying, "Hey, Take It Easy"? Now there's a new saying, "Hey, Make It Easy!"
+You've heard the saying, "Hey, Take It Easy"? 
+
+Now there's a new saying, "Hey, Make It Easy!"
 
 A wide variety of different displays, sensors, lights and motors can plug directly into a MakerPort. It's like an Arduino that doesn't need shields because it has ports instead. It's like a USB hub designed for Makers. 
 
