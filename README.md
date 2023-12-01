@@ -21,15 +21,17 @@ To build this project you will need:
 ### The MakerPort
 You've heard the saying, "Hey, Take It Easy"? 
 
-Now there's a new saying, "Hey, Make It Easy!"
+Now there's a new saying, "Hey, Make It Easy!" With a MakerPort.
 
-A wide variety of different displays, sensors, lights and motors can plug directly into a MakerPort. It's like an Arduino that doesn't need shields because it has ports instead. It's like a USB hub designed for Makers. 
+The MakerPort is built around (and includes) the same, advanced microcontroller as the modern Arduino Zero. In other words, no Arduino required. It stands alone.
+
+It can be programmed using the Arduino IDE, but that is not necessary. This project demonstrates an accessible and user-friendly alternative, called MicroBlocks.
+
+A wide variety of different displays, sensors, lights, servo motors and other Maker gear can plug directly into a MakerPort. It's like an Arduino that doesn't need shields because it has ports instead. It's like an intelligent expansion hub designed for Makers. 
 
 Suppose you want to make something that interacts with people or controls something, but without the need to wire up a circuit board. Make It Easy, with a MakerPort.
 
 Even more, it contains an MP3 audio player and built-in speaker. This project uses the feature to say the names of the Bingo balls out loud.
-
-The MakerPort is built around the same, advanced microcontroller as the modern Arduino Zero. It can be programmed using the Arduino IDE, but that is not necessary. This project demonstrates an accessible and user-friendly alternative, called MicroBlocks.
 
 ### MicroBlocks
 This is a graphical programming language. Users build programs by selecting and connecting colorful "blocks", similar to the popular Scratch and Snap! In fact, some of the same people who originated those two languages are leading the development of MicroBlocks.
