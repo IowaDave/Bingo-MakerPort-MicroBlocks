@@ -34,38 +34,13 @@ to nextBall {
 to typeBalls {
 }
 
-script 1106 40 {
-whenStarted
-comment 'Initialize. Runs only once.'
-comment 'Get the MakerPort ready. '
-makerport_initialize
-makerport_setAudioSource 'MP3'
-mp3_initialize 'MakerPort' 20 21
-comment 'Prepare a list of 75 numbers, 1 through 75.'
-SuspendDrawing = (booleanConstant true)
-MaximumBallNumber = 75
-AllBalls = ('[data:makeList]')
-for i MaximumBallNumber {
-  '[data:addLast]' i AllBalls
-}
-comment 'Prepare a special line-end string for typing to the computer.'
-crlf = ('[data:makeList]')
-'[data:addLast]' ('[data:unicodeString]' 13) crlf
-'[data:addLast]' ('[data:unicodeString]' 10) crlf
-crlf = ('[data:joinStrings]' crlf)
-comment 'Exit this script by launching the first game.'
-sendBroadcast 'newGame'
-}
-
-script 166 53 {
+script 66 66 {
 to ballName {}
 }
 
-script 558 53 {
+script 458 66 {
 whenCondition (touch_touch_event)
 comment 'This is the "forever" loop of the program'
-comment 'Remove old messages from the computer screen.'
-sayIt ''
 comment 'Make a list of touchpin numbers and the corresponding blocks they activate'
 local 'pinList' ('[data:makeList]' 1 'nextBall' 5 'newGame' 11 'typeBalls')
 comment 'Convert the triggering touchpoint number into a list index number'
@@ -77,10 +52,28 @@ if (index > 0) {
 }
 }
 
-script 512 527 {
+script 942 66 {
+whenStarted
+comment 'Initialize. Runs only once.'
+makerport_initialize
+makerport_setAudioSource 'MP3'
+mp3_initialize 'MakerPort' 20 21
+SuspendDrawing = (booleanConstant true)
+MaximumBallNumber = 75
+AllBalls = ('[data:makeList]')
+for i MaximumBallNumber {
+  '[data:addLast]' i AllBalls
+}
+crlf = ('[data:makeList]')
+'[data:addLast]' ('[data:unicodeString]' 13) crlf
+'[data:addLast]' ('[data:unicodeString]' 10) crlf
+crlf = ('[data:joinStrings]' crlf)
+sendBroadcast 'newGame'
+}
+
+script 412 540 {
 whenBroadcastReceived 'nextBall'
-comment 'Selects the next ball from the randomly shuffled list'
-comment 'But first perform some quality control checks.'
+comment 'Randomly select the next ball from the shuffled list'
 if SuspendDrawing {
   return 0
 }
@@ -90,8 +83,8 @@ if (NumberOfBallsDrawn >= MaximumBallNumber) {
   sayIt ''
   return 0
 }
-comment 'Proceed to draw the next ball, if OK to do so.'
 if OKtoDrawNextBall {
+  sayIt ''
   OKtoDrawNextBall = (booleanConstant false)
   NumberOfBallsDrawn += 1
   ball = (at NumberOfBallsDrawn AllBalls)
@@ -103,13 +96,13 @@ if OKtoDrawNextBall {
 }
 }
 
-script 172 529 {
+script 72 542 {
 whenBroadcastReceived 'newGame'
 comment 'Starts a new game.'
 OKtoDrawNextBall = (booleanConstant false)
-AllBalls = (list_shuffled AllBalls)
 ballList = ('[data:makeList]')
 NumberOfBallsDrawn = 0
+AllBalls = (list_shuffled AllBalls)
 sayIt 'Let''s Play Bingo!'
 mp3_playTrackUntilDone 76 81
 sayIt ''
@@ -117,7 +110,7 @@ SuspendDrawing = (booleanConstant false)
 OKtoDrawNextBall = (booleanConstant true)
 }
 
-script 1060 712 {
+script 944 558 {
 whenBroadcastReceived 'typeBalls'
 comment 'Send the current list of previously-drawn balls to the computer.'
 comment 'User must activate a typing window on the computer to receive it.'
@@ -129,10 +122,6 @@ for ballItem ballList {
   mp3_playTrackUntilDone ballItem 81
 }
 SuspendDrawing = (booleanConstant false)
-}
-
-script 40 926 {
-comment 'How this works...'
 }
 
 

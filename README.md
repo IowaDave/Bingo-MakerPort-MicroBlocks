@@ -40,7 +40,7 @@ A very nice feature of MicroBlocks is how the blocks read like instructions give
 
 Extensive documentation is available at [the dedicated MicroBlocks Wiki site](https://wiki.microblocks.fun/en/home). 
 
-The Wiki includes a User Guide that covers all the basics. 
+The Wiki begins with a User Guide that covers all the basics. 
 
 ---
 
@@ -86,7 +86,7 @@ Each of the three touchpoints initiates a different action:
 
 Six, separate "scripts" make up the program. A script is a list of blocks connected together under a "hat". The hat identifies the script and tells MicroBlocks when to run the code in it. 
 
-Each script performs just one action. Five of them respond to user actions, such as touching a touchpoint. The sixth defines a "helper" function that runs when one of the other scripts call for it.
+Each script performs just one task. Five of them respond to user actions, such as touching a touchpoint. The sixth defines a "helper" function that runs when one of the other scripts call for it.
 
 MicroBlocks activates the scripts as needed to create the game experience.
 
@@ -146,7 +146,7 @@ So, we have three numbers (1, 5 and 11), each paired to three text strings. Wher
 
 The gray socket on the MakerPort provides 12 places to plug in a touchpoint, numbered 1 through 12. In addition, the three special spots on the enclosure also plug into positions 1, 5 and 11. 
 
-MicroCode looks up the pin number number and broadcasts the corresponding text string. Study the example code until it become clear to you which touchpoint triggers each action:
+MicroCode looks up the pin number number and broadcasts the corresponding text string. Study the example code until it becomes clear to you which touchpoint triggers each action:
 
 * #1 draws a new ball.
 * #5 starts a new game.
@@ -159,7 +159,7 @@ Other programming languages might refer to this technique as a "jump table" or a
 What is "concurrency?" It's explained [at this link about Tasks in the Wiki](https://wiki.microblocks.fun/en/virtual_machine#tasks).
 
 ### When NextBall Received
-Here is the main job of the script. It responds to touchpoint #1.
+Here is the main job of the program. It responds to touchpoint #1.
 
 ![Picture of when-nextball script](./images/when-nextball-received.png)
 
@@ -174,7 +174,7 @@ When it is OK to draw the next ball then the script increases the ball count by 
 The ball number is added to the ```ballList``` and then used to announce the name of the ball to the users. It makes the announcement two, different ways.
 
 * The ```say``` block shows it on the computer screen when the MakerPort is connected to the MicroCode IDE.
-* ```mp3 play track``` selects an audio file from the microSD card and plays it through the built-in speaker.
+* ```mp3 play track``` selects the matching audio file from the microSD card and plays it through the built-in speaker.
 
 Finally, the script displays the number of balls that have not yet been drawn. This information appears only on the computer screen. It does not get read out loud through the MP3 player.
 

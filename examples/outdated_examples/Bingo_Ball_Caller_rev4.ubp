@@ -90,8 +90,8 @@ if (NumberOfBallsDrawn >= MaximumBallNumber) {
   sayIt ''
   return 0
 }
-comment 'Proceed to draw the next ball, if OK to do so.'
 if OKtoDrawNextBall {
+  sayIt ''
   OKtoDrawNextBall = (booleanConstant false)
   NumberOfBallsDrawn += 1
   ball = (at NumberOfBallsDrawn AllBalls)
