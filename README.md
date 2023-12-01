@@ -68,6 +68,8 @@ The example code provided for this project takes advantage of the MakerPort's MP
 Copy the folder named "81" from this GitHub repository onto a microSD card. Install the card into the MakerPort. Important: slide the small switch on the side of the MakerPort so it is closest to the USB socket. This position enables the MP3 player to access the files on the microSD card. 
 
 ## How the Program Works
+Copy the example program from this repo to your computer then open it in the MicroBlocks editing window.
+
 Each of the three touchpoints initiates a different action:
 
 * Start a new game.
