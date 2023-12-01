@@ -175,9 +175,45 @@ Its work being complete, the script exits.
 MicroCode waits for the user to touch another touchpoint.
 
 ### When TypeBalls Received
+This script illustrates how the ```for ... in ...``` block of MicroBlocks sequentially processes each item in a list. Not every programming language makes it this easy.
+
+---
+NOTE TO REVIEWERS
+
+It also illustrates how to type information into a window on a connected computer.
+
+I feel indifferent about whether this feature belongs in an introductory project.
+--- 
+
 ![Picture of when-typeballs script](./images/when-typeballs-received.png)
 
+At times during a Bingo game, the players might want to review which balls have already been drawn. They will surely want to check whenever someone shouts "Bingo!"
+
+Touching pin #11 activates this script to report the state of the game. It suspends drawing new balls while it does so.
+
+Remember that the "items" in ```ballList``` are just numbers between 1 and 75. Item 1 is whichever number was drawn first, and so forth.
+
+The script steps through all of the items in ```ballList``` in order, starting with item #1. The ```ballItem``` block receives the numerical value of that item. 
+
+Suppose item #1 had the value 42. ```ballItem``` would be assigned the value 42. It would be audibly announced as "O-42". It would also be typed into a window on a connected computer.
+
+Then the next item's value would be assigned to ```ballItem```. The sequence repeats until all items in ```ballList``` have been reported to the players.
+
+The script finishes by re-enabling ball-drawing and the game resumes.
+
+To start a new game, players have to touch pin #5.
+
+
 ### Define BallName
+This is a "reporter block", so called because it reports a result at the end. 
+
+It illustrates how MicroBlocks manipulates strings.
+
 ![Picture of define-ballname script](./images/define-ballname.png)
 
+It receives a number in the range 1 through 75 and returns a text string joining the number to its column on a Bingo game card. For example, it knows to join '42' with the letter "O", returning "O-42".
+
+It's a separate script because two of the other scripts need this done. Write once, use many times. Other programming languages would call it a subroutine or a procedure.
+
+Study how the ```join``` block turns numbers into strings and concatenates (joins together) different parts of a string. It is the MicroBlocks way.
 
