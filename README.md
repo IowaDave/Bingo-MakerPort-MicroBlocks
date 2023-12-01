@@ -38,10 +38,20 @@ A very nice feature of MicroBlocks is how the blocks read like instructions give
 
 Extensive documentation is available at [the dedicated MicroBlocks Wiki site](https://wiki.microblocks.fun/en/home). 
 
-The Wiki includes a User Guide that covers all the basics. Here is a link to a separate, [introductory tutorial] showing how to use MicroBlocks to blink an LED plugged into a MakerPort. No circuit board required!
+The Wiki includes a User Guide that covers all the basics. 
+
+---
+
+NOTE TO REVIEWERS: I am considering adding the following.
+
+For newcomers to MicroBlocks and MakerPort, here is a link to a separate, [introductory tutorial] showing how to use MicroBlocks to blink an LED plugged into a MakerPort. No circuit board required!
+
+---
 
 ### The MakerPort Library
-MicroBlocks supports many different Maker devices. 
+MicroBlocks supports many different Maker devices. You can customize the language by adding a Library.
+
+Install the MakerPort by following these links in the MicroBlocks editing window: +Library > Kits and Boards > MakerPort.
 
 ### All About Touchpoints
 A touchpoint is a physical object that works as a kind of electronic pushbutton. Merely touch it. The MakerPort will detect the touch and activate code you write to respond to it.
