@@ -1,7 +1,7 @@
 # Bingo-MakerPort-MicroBlocks
 
 ## Let's Play Bingo!
-Make an interactive, audible Bingo game caller using MicroCode with Roger Wagner's MakerPort.
+Make an interactive, audible Bingo game caller using MicroBlocks with Roger Wagner's MakerPort.
 
 To build this project you will need:
 
@@ -146,7 +146,7 @@ So, we have three numbers (1, 5 and 11), each paired to three text strings. Wher
 
 The gray socket on the MakerPort provides 12 places to plug in a touchpoint, numbered 1 through 12. In addition, the three special spots on the enclosure also plug into positions 1, 5 and 11. 
 
-MicroCode looks up the pin number number and broadcasts the corresponding text string. Study the example code until it becomes clear to you which touchpoint triggers each action:
+MicroBlocks looks up the pin number number and broadcasts the corresponding text string. Study the example code until it becomes clear to you which touchpoint triggers each action:
 
 * #1 draws a new ball.
 * #5 starts a new game.
@@ -173,14 +173,14 @@ When it is OK to draw the next ball then the script increases the ball count by 
 
 The ball number is added to the ```ballList``` and then used to announce the name of the ball to the users. It makes the announcement two, different ways.
 
-* The ```say``` block shows it on the computer screen when the MakerPort is connected to the MicroCode IDE.
+* The ```say``` block shows it on the computer screen when the MakerPort is connected to the MicroBlocks IDE.
 * ```mp3 play track``` selects the matching audio file from the microSD card and plays it through the built-in speaker.
 
 Finally, the script displays the number of balls that have not yet been drawn. This information appears only on the computer screen. It does not get read out loud through the MP3 player.
 
 Its work being complete, the script exits. 
 
-MicroCode waits for the user to touch another touchpoint.
+MicroBlocks waits for the user to touch another touchpoint.
 
 ### When TypeBalls Received
 This script illustrates how the ```for ... in ...``` block of MicroBlocks sequentially processes each item in a list. Not every programming language makes it this easy.
